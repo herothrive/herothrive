@@ -7,9 +7,10 @@
     <style>
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #3c3b6e; background: #ffffff; }
         nav { background: #3c3b6e; color: #ffffff; padding: 10px; position: fixed; width: 100%; top: 0; z-index: 1000; }
-        nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; }
+        nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; }
         nav ul li { margin: 0 15px; }
         nav ul li a { color: #ffffff; text-decoration: none; font-weight: bold; }
+        nav ul li.donate-li { margin-left: auto; }
         .hero { background: #b22234; color: #ffffff; text-align: center; padding: 100px 20px; margin-top: 60px; }
         .hero h1 { font-size: 3em; margin: 0; }
         .hero p { font-size: 1.5em; }
@@ -26,24 +27,29 @@
         input, textarea { margin: 10px 0; padding: 10px; border: none; border-radius: 4px; }
         button { background: #3c3b6e; color: #ffffff; padding: 10px; border: none; cursor: pointer; }
         .donate-btn { background: #b22234; color: #ffffff; padding: 10px 20px; border: none; cursor: pointer; font-weight: bold; margin: 20px auto; display: block; }
-        @media (max-width: 768px) { .pillar { width: 100%; } nav ul { flex-direction: column; } }
+        .hero .donate-btn { background: #3c3b6e; }
+        .images { display: flex; justify-content: space-around; flex-wrap: wrap; }
+        .images img { width: 30%; margin: 10px; border-radius: 8px; }
+        .sponsors, .challenges { text-align: center; margin: 20px 0; }
+        @media (max-width: 768px) { .pillar, .images img { width: 100%; } nav ul { flex-direction: column; } nav ul li.donate-li { margin-left: 0; } }
     </style>
 </head>
 <body>
     <nav>
         <ul>
+            <li><a href="#"><img src="logo.png" alt="HeroThrive Logo" style="height:40px;"></a></li>
             <li><a href="#hero">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#events">Events</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><button class="donate-btn" onclick="alert('Redirecting to donation page...')">Donate Now</button></li>
+            <li class="donate-li"><button class="donate-btn" onclick="window.location.href='https://www.zeffy.com/donation-form/donate-to-help-veteran-mental-health'">Donate Now</button></li>
         </ul>
     </nav>
     <section id="hero" class="hero">
         <h1>Empowering Heroes to Thrive</h1>
         <p>Supporting veterans and first responders with bold, compassionate solutions for health, employment, and housing.</p>
-        <button class="donate-btn">Donate Now</button>
+        <button class="donate-btn" onclick="window.location.href='https://www.zeffy.com/donation-form/donate-to-help-veteran-mental-health'">Donate Now</button>
     </section>
     <section id="about" class="section about">
         <h2>About HeroThrive</h2>
@@ -72,6 +78,11 @@
                 </ul>
             </div>
         </div>
+        <div class="images">
+            <img src="https://i.imgur.com/jd3x1P7.jpg" alt="Veteran with Child">
+            <img src="https://i.imgur.com/nWTYKCV.jpg" alt="First Responders">
+            <img src="https://i.imgur.com/p7mBMDt.jpg" alt="EMTs">
+        </div>
     </section>
     <section id="testimonials" class="section testimonials">
         <h2>Testimonials</h2>
@@ -84,6 +95,8 @@
         <div class="event">Mental Health Workshop - August 15, 2025</div>
         <div class="event">Job Fair - September 10, 2025</div>
         <div class="event">Community Build Day - October 5, 2025</div>
+        <div class="sponsors"><a href="SPONSOR_SIGNUP_LINK">Sign Up as Sponsor</a></div>
+        <div class="challenges"><a href="CHALLENGE_SIGNUP_LINK">Sign Up for Challenges</a></div>
     </section>
     <section id="contact" class="section contact">
         <h2>Contact Us</h2>
