@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeroThrive - Supporting Veterans and First Responders</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #3c3b6e; background: #ffffff; }
+        nav { background: #3c3b6e; color: #ffffff; padding: 10px; position: fixed; width: 100%; top: 0; z-index: 1000; }
+        nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; }
+        nav ul li { margin: 0 15px; }
+        nav ul li a { color: #ffffff; text-decoration: none; font-weight: bold; }
+        .hero { background: #b22234; color: #ffffff; text-align: center; padding: 100px 20px; margin-top: 60px; }
+        .hero h1 { font-size: 3em; margin: 0; }
+        .hero p { font-size: 1.5em; }
+        .section { padding: 50px 20px; max-width: 1200px; margin: auto; }
+        .about { background: #ffffff; }
+        .pillars { display: flex; flex-wrap: wrap; justify-content: space-around; }
+        .pillar { width: 30%; min-width: 250px; margin: 10px; padding: 20px; background: #f0f0f0; border-radius: 8px; }
+        .testimonials { background: #3c3b6e; color: #ffffff; }
+        .testimonial { margin: 20px 0; font-style: italic; }
+        .events { background: #ffffff; }
+        .event { margin: 20px 0; }
+        .contact { background: #b22234; color: #ffffff; }
+        form { display: flex; flex-direction: column; max-width: 600px; margin: auto; }
+        input, textarea { margin: 10px 0; padding: 10px; border: none; border-radius: 4px; }
+        button { background: #3c3b6e; color: #ffffff; padding: 10px; border: none; cursor: pointer; }
+        .donate-btn { background: #b22234; color: #ffffff; padding: 10px 20px; border: none; cursor: pointer; font-weight: bold; margin: 20px auto; display: block; }
+        @media (max-width: 768px) { .pillar { width: 100%; } nav ul { flex-direction: column; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><button class="donate-btn" onclick="alert('Redirecting to donation page...')">Donate Now</button></li>
+        </ul>
+    </nav>
+    <section id="hero" class="hero">
+        <h1>Empowering Heroes to Thrive</h1>
+        <p>Supporting veterans and first responders with bold, compassionate solutions for health, employment, and housing.</p>
+        <button class="donate-btn">Donate Now</button>
+    </section>
+    <section id="about" class="section about">
+        <h2>About HeroThrive</h2>
+        <p>HeroThrive is a nonprofit dedicated to veterans' wellness and growth, addressing holistic needs through three pillars: HeroThrive Health, Hiring, and Homes. We foster community, drive change, and empower veterans to lead fulfilling lives.</p>
+        <div class="pillars">
+            <div class="pillar">
+                <h3>HeroThrive Health</h3>
+                <ul>
+                    <li>Support Groups and Mental Health Training</li>
+                    <li>Life and Health Coaching</li>
+                    <li>Community Events and Challenges</li>
+                </ul>
+            </div>
+            <div class="pillar">
+                <h3>HeroThrive Hiring</h3>
+                <ul>
+                    <li>Employment and Job Training</li>
+                    <li>Education and Skill Development</li>
+                </ul>
+            </div>
+            <div class="pillar">
+                <h3>HeroThrive Homes</h3>
+                <ul>
+                    <li>End Veteran Homelessness</li>
+                    <li>Engage Home Builders and Community Support</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="testimonials" class="section testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonial">"HeroThrive changed my life with their health coaching." - Veteran A</div>
+        <div class="testimonial">"Found stable employment through their programs." - First Responder B</div>
+        <div class="testimonial">"Secure housing thanks to HeroThrive Homes." - Veteran C</div>
+    </section>
+    <section id="events" class="section events">
+        <h2>Upcoming Events</h2>
+        <div class="event">Mental Health Workshop - August 15, 2025</div>
+        <div class="event">Job Fair - September 10, 2025</div>
+        <div class="event">Community Build Day - October 5, 2025</div>
+    </section>
+    <section id="contact" class="section contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <script>
+        // Basic form submission alert (replace with real backend)
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Message sent!');
+        });
+    </script>
+</body>
+</html>
